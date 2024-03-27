@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DZ5</title>
+</head>
+<body>
+    <div class="content center">
+
+    </div>
+    <script src="data.js"></script>
+    <script>
+        const data = JSON.parse(dataInfo)
+
+        const content = document.querySelector('.content');
+
+        data.forEach(element => {
+            
+            const card = document.createElement('div');
+            card.classList.add('card')
+    
+            const cardImg = document.createElement('img');
+            cardImg.classList.add('card__img')
+            cardImg.src = element.image
+            cardImg.alt = 'foto'
+
+            const cartContent = document.createElement('div');
+            cartContent.classList.add('card__content')
+
+            const cardName = document.createElement('p');
+            cardName.classList.add('card__name', 'text')
+            cardName.textContent = `Name: ${element.name}`
+
+            const cardStatus = document.createElement('p');
+            cardStatus.classList.add('card__status', 'text')
+            cardStatus.textContent = `Status: ${element.status}`
+
+            const cardSpecies = document.createElement('p');
+            cardSpecies.classList.add('card__species', 'text')
+            cardSpecies.textContent = `Species: ${element.species}` 
+
+            const cardGender = document.createElement('p');
+            cardGender.classList.add('card__gender', 'text')
+            cardGender.textContent = `Gender: ${element.gender}` 
+
+            card.append(cardImg)
+            card.append(cartContent)
+            cartContent.append(cardName)
+            cartContent.append(cardStatus)
+            cartContent.append(cardSpecies)
+            cartContent.append(cardGender)
+            content.append(card)
+        });
+    </script>
+</body>
+</html>

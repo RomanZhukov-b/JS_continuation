@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px gray solid;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border: 1px gray solid;
+  background-color: darkseagreen;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 20px;
+  color: darkslategrey;
+}/*# sourceMappingURL=style.css.map */
